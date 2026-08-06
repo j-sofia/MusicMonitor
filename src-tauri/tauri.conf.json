@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MusicMonitor",
+  "version": "0.1.3",
+  "identifier": "com.musicmonitor.desktop",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' ipc: http://ipc.localhost https://api.spotify.com https://accounts.spotify.com; img-src 'self' asset: http://asset.localhost https://i.scdn.co https://*.scdn.co data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    },
+    "windows": [
+      {
+        "label": "display",
+        "title": "MusicMonitor",
+        "url": "index.html",
+        "visible": false,
+        "decorations": false,
+        "resizable": false,
+        "maximizable": false,
+        "minimizable": false,
+        "closable": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "focus": false,
+        "shadow": false,
+        "backgroundColor": "#090b0f",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "label": "settings",
+        "title": "MusicMonitor Settings",
+        "url": "index.html",
+        "visible": false,
+        "decorations": true,
+        "resizable": true,
+        "maximizable": true,
+        "minimizable": true,
+        "width": 1040,
+        "height": 760,
+        "minWidth": 840,
+        "minHeight": 620,
+        "center": true,
+        "backgroundColor": "#0b0d11"
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "category": "Music",
+    "shortDescription": "Ambient Spotify now-playing display",
+    "longDescription": "A read-only Spotify companion that turns a dedicated monitor into an ambient now-playing display and disappears when you use that monitor.",
+    "publisher": "MusicMonitor",
+    "copyright": "Copyright (c) 2026 MusicMonitor contributors",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false
+      },
+      "wix": {
+        "language": "en-US"
+      }
+    }
+  }
+}

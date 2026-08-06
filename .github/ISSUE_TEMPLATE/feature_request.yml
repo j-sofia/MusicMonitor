@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a focused improvement to the ambient display.
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        MusicMonitor is intentionally a read-only ambient display. Playback controls, queue/volume/device changes, audio analysis, lyrics or Canvas scraping, private APIs, telemetry, and a hosted backend are out of scope.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem does this solve on a dedicated display?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the user-visible result without prescribing an architecture unless needed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: textarea
+    id: interaction
+    attributes:
+      label: Pointer, focus, and accessibility impact
+      description: Explain any effect on hide/show timing, first-click pass-through, keyboard focus, reduced motion, high contrast, or burn-in.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: This keeps MusicMonitor read-only and does not add playback controls or private Spotify APIs.
+          required: true
+        - label: I searched existing issues for this idea.
+          required: true

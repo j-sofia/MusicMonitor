@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Spotify Web API documentation
+    url: https://developer.spotify.com/documentation/web-api
+    about: Check current Spotify platform and Development Mode requirements.

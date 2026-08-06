@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a reproducible MusicMonitor problem.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Search existing issues first and never attach OAuth tokens, full callback URLs, personal client IDs, or Credential Manager exports. Report security issues privately via SECURITY.md.
+
+  - type: input
+    id: version
+    attributes:
+      label: MusicMonitor version or commit
+      placeholder: 0.1.3 or commit SHA
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, build ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: displays
+    attributes:
+      label: Display setup
+      description: Include target position, resolution, orientation, and DPI/scaling for each relevant monitor.
+      placeholder: Primary 2560x1440 at 125%; target to the left at 1920x1080 and 100%.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select ...
+        2. Move the pointer ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add sanitized logs, screenshots, GPU/dock details, or Spotify item type when relevant.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy and scope check
+      options:
+        - label: I removed tokens, OAuth codes/callbacks, personal client IDs, and other private data.
+          required: true
+        - label: I searched existing issues and read the troubleshooting guide.
+          required: true
