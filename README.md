@@ -18,6 +18,8 @@ change volume, edit the queue, or transfer playback.
 > [docs/MANUAL_TESTS.md](docs/MANUAL_TESTS.md) is not yet recorded as complete.
 > There are currently no signed public installers; build from source.
 
+![MusicMonitor gallery view showing Spotify artwork, track metadata, progress, and a featured artist](docs/images/musicmonitor-gallery.png)
+
 ## The interaction
 
 ```text
